@@ -1,8 +1,6 @@
 {
-  "name": "tmp",
+  "name": "vue-fastify-template",
   "version": "0.1.0",
-  "author": "neverendingqs",
-  "license": "Apache-2.0",
   "scripts": {
     "client:build": "vue-cli-service build",
     "client:lint": "vue-cli-service lint",
@@ -14,6 +12,16 @@
     "start": "node concurrently.js",
     "test": "npm run client:lint && npm run server:test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neverendingqs/vue-fastify-template.git"
+  },
+  "author": "neverendingqs",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/neverendingqs/vue-fastify-template/issues"
+  },
+  "homepage": "https://github.com/neverendingqs/vue-fastify-template#readme",
   "dependencies": {
     "core-js": "^2.6.5",
     "fastify": "^2.0.0",
