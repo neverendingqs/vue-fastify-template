@@ -9,7 +9,10 @@
     "client:serve": "vue-cli-service serve",
     "server:dev": "fastify start -l info -P server/app.js",
     "server:start": "fastify start -l info server/app.js",
-    "server:test": "tap server/test/**/*.test.js"
+    "server:test": "tap server/test/**/*.test.js",
+    "serve": "npm run server:dev && npm run client:serve",
+    "start": "node concurrently.js",
+    "test": "npm run client:lint && npm run server:test"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -24,6 +27,7 @@
     "@vue/cli-plugin-eslint": "^3.12.0",
     "@vue/cli-service": "^3.12.0",
     "babel-eslint": "^10.0.1",
+    "concurrently": "^5.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "tap": "^12.5.3",
