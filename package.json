@@ -1,0 +1,67 @@
+{
+  "name": "vue-fastify-template",
+  "version": "0.1.0",
+  "scripts": {
+    "client:build": "vue-cli-service build",
+    "client:lint": "vue-cli-service lint",
+    "client:serve": "vue-cli-service serve",
+    "server:dev": "fastify start -l info -P server/app.js",
+    "server:start": "fastify start -l info server/app.js",
+    "server:test": "tap server/test/**/*.test.js",
+    "serve": "npm run server:dev && npm run client:serve",
+    "start": "node concurrently.js",
+    "test": "npm run client:lint && npm run server:test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neverendingqs/vue-fastify-template.git"
+  },
+  "author": "neverendingqs",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/neverendingqs/vue-fastify-template/issues"
+  },
+  "homepage": "https://github.com/neverendingqs/vue-fastify-template#readme",
+  "dependencies": {
+    "core-js": "^2.6.5",
+    "fastify": "^2.0.0",
+    "fastify-plugin": "^1.5.0",
+    "fastify-autoload": "^1.0.0",
+    "fastify-cli": "^1.3.0",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.12.0",
+    "@vue/cli-plugin-eslint": "^3.12.0",
+    "@vue/cli-service": "^3.12.0",
+    "babel-eslint": "^10.0.1",
+    "concurrently": "^5.0.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "tap": "^12.5.3",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
